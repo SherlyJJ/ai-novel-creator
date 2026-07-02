@@ -1,0 +1,432 @@
+import { createHotContext as __vite__createHotContext } from "/@vite/client";import.meta.hot = __vite__createHotContext("/src/pages/AIConfig.tsx");import __vite__cjsImport0_react_jsxDevRuntime from "/node_modules/.vite/deps/react_jsx-dev-runtime.js?v=c201afd8"; const Fragment = __vite__cjsImport0_react_jsxDevRuntime["Fragment"]; const jsxDEV = __vite__cjsImport0_react_jsxDevRuntime["jsxDEV"];
+import * as RefreshRuntime from "/@react-refresh";
+const inWebWorker = typeof WorkerGlobalScope !== "undefined" && self instanceof WorkerGlobalScope;
+let prevRefreshReg;
+let prevRefreshSig;
+if (import.meta.hot && !inWebWorker) {
+  if (!window.$RefreshReg$) {
+    throw new Error(
+      "@vitejs/plugin-react can't detect preamble. Something is wrong."
+    );
+  }
+  prevRefreshReg = window.$RefreshReg$;
+  prevRefreshSig = window.$RefreshSig$;
+  window.$RefreshReg$ = RefreshRuntime.getRefreshReg("D:/翟静de工作文件/20260616完整产品demo尝试/ai-novel-creator/src/pages/AIConfig.tsx");
+  window.$RefreshSig$ = RefreshRuntime.createSignatureFunctionForTransform;
+}
+var _s = $RefreshSig$();
+import __vite__cjsImport3_react from "/node_modules/.vite/deps/react.js?v=c201afd8"; const useState = __vite__cjsImport3_react["useState"];
+import { useAIConfigStore } from "/src/store/useAIConfigStore.ts";
+import { Key, Globe, Cpu, CheckCircle, AlertCircle } from "/node_modules/.vite/deps/lucide-react.js?v=92a8d5bd";
+export default function AIConfig() {
+  _s();
+  const aiConfig = useAIConfigStore((state) => state.getConfig());
+  const setAIConfig = useAIConfigStore((state) => state.setConfig);
+  const isAIConfigured = useAIConfigStore((state) => state.isConfigured());
+  const [saved, setSaved] = useState(false);
+  const handleSave = () => {
+    setSaved(true);
+    setTimeout(() => setSaved(false), 1500);
+  };
+  return /* @__PURE__ */ jsxDEV("div", { className: "flex-1 flex flex-col h-full overflow-y-auto p-8", children: [
+    /* @__PURE__ */ jsxDEV("header", { className: "flex items-center justify-between mb-6", children: [
+      /* @__PURE__ */ jsxDEV("h1", { className: "text-2xl font-extrabold", children: "AI 配置" }, void 0, false, {
+        fileName: "D:/翟静de工作文件/20260616完整产品demo尝试/ai-novel-creator/src/pages/AIConfig.tsx",
+        lineNumber: 39,
+        columnNumber: 9
+      }, this),
+      /* @__PURE__ */ jsxDEV(
+        "button",
+        {
+          onClick: handleSave,
+          className: "px-5 py-2.5 rounded-lg bg-gradient-to-r from-emerald-500 to-cyan-500 text-white text-sm font-semibold shadow-lg shadow-emerald-500/25 hover:shadow-emerald-500/40 hover:-translate-y-0.5 transition-all",
+          children: saved ? "已保存" : "保存配置"
+        },
+        void 0,
+        false,
+        {
+          fileName: "D:/翟静de工作文件/20260616完整产品demo尝试/ai-novel-creator/src/pages/AIConfig.tsx",
+          lineNumber: 40,
+          columnNumber: 9
+        },
+        this
+      )
+    ] }, void 0, true, {
+      fileName: "D:/翟静de工作文件/20260616完整产品demo尝试/ai-novel-creator/src/pages/AIConfig.tsx",
+      lineNumber: 38,
+      columnNumber: 7
+    }, this),
+    /* @__PURE__ */ jsxDEV("div", { className: "max-w-4xl space-y-6", children: [
+      /* @__PURE__ */ jsxDEV("section", { className: "glass rounded-2xl p-6 glow-border", children: [
+        /* @__PURE__ */ jsxDEV("div", { className: "flex items-center gap-2 mb-5", children: [
+          /* @__PURE__ */ jsxDEV("div", { className: "w-2 h-2 rounded-full bg-emerald-500 shadow-[0_0_12px_#10B981]" }, void 0, false, {
+            fileName: "D:/翟静de工作文件/20260616完整产品demo尝试/ai-novel-creator/src/pages/AIConfig.tsx",
+            lineNumber: 51,
+            columnNumber: 13
+          }, this),
+          /* @__PURE__ */ jsxDEV("h2", { className: "text-base font-bold", children: "AI 服务配置" }, void 0, false, {
+            fileName: "D:/翟静de工作文件/20260616完整产品demo尝试/ai-novel-creator/src/pages/AIConfig.tsx",
+            lineNumber: 52,
+            columnNumber: 13
+          }, this)
+        ] }, void 0, true, {
+          fileName: "D:/翟静de工作文件/20260616完整产品demo尝试/ai-novel-creator/src/pages/AIConfig.tsx",
+          lineNumber: 50,
+          columnNumber: 11
+        }, this),
+        /* @__PURE__ */ jsxDEV("p", { className: "text-xs text-slate-500 mb-4", children: "配置 AI 服务以启用智能搜索和解析功能。每个用户需要配置自己的 API Key，配置仅保存在本地浏览器中。" }, void 0, false, {
+          fileName: "D:/翟静de工作文件/20260616完整产品demo尝试/ai-novel-creator/src/pages/AIConfig.tsx",
+          lineNumber: 54,
+          columnNumber: 11
+        }, this),
+        /* @__PURE__ */ jsxDEV("div", { className: "space-y-4", children: [
+          /* @__PURE__ */ jsxDEV("div", { children: [
+            /* @__PURE__ */ jsxDEV("label", { className: "flex items-center gap-2 text-xs text-slate-500 mb-1.5", children: [
+              /* @__PURE__ */ jsxDEV(Globe, { size: 12 }, void 0, false, {
+                fileName: "D:/翟静de工作文件/20260616完整产品demo尝试/ai-novel-creator/src/pages/AIConfig.tsx",
+                lineNumber: 61,
+                columnNumber: 17
+              }, this),
+              "API 地址"
+            ] }, void 0, true, {
+              fileName: "D:/翟静de工作文件/20260616完整产品demo尝试/ai-novel-creator/src/pages/AIConfig.tsx",
+              lineNumber: 60,
+              columnNumber: 15
+            }, this),
+            /* @__PURE__ */ jsxDEV(
+              "input",
+              {
+                className: "w-full px-4 py-3 rounded-lg bg-white/80 border border-indigo-500/10 text-sm outline-none focus:border-indigo-400 focus:ring-2 focus:ring-indigo-500/10 transition-all",
+                value: aiConfig.apiUrl,
+                onChange: (e) => setAIConfig({ apiUrl: e.target.value }),
+                placeholder: "https://api.deepseek.com/v1/chat/completions"
+              },
+              void 0,
+              false,
+              {
+                fileName: "D:/翟静de工作文件/20260616完整产品demo尝试/ai-novel-creator/src/pages/AIConfig.tsx",
+                lineNumber: 64,
+                columnNumber: 15
+              },
+              this
+            ),
+            /* @__PURE__ */ jsxDEV("p", { className: "text-[10px] text-slate-400 mt-1", children: "DeepSeek: https://api.deepseek.com/v1/chat/completions" }, void 0, false, {
+              fileName: "D:/翟静de工作文件/20260616完整产品demo尝试/ai-novel-creator/src/pages/AIConfig.tsx",
+              lineNumber: 70,
+              columnNumber: 15
+            }, this)
+          ] }, void 0, true, {
+            fileName: "D:/翟静de工作文件/20260616完整产品demo尝试/ai-novel-creator/src/pages/AIConfig.tsx",
+            lineNumber: 59,
+            columnNumber: 13
+          }, this),
+          /* @__PURE__ */ jsxDEV("div", { children: [
+            /* @__PURE__ */ jsxDEV("label", { className: "flex items-center gap-2 text-xs text-slate-500 mb-1.5", children: [
+              /* @__PURE__ */ jsxDEV(Key, { size: 12 }, void 0, false, {
+                fileName: "D:/翟静de工作文件/20260616完整产品demo尝试/ai-novel-creator/src/pages/AIConfig.tsx",
+                lineNumber: 77,
+                columnNumber: 17
+              }, this),
+              "API Key"
+            ] }, void 0, true, {
+              fileName: "D:/翟静de工作文件/20260616完整产品demo尝试/ai-novel-creator/src/pages/AIConfig.tsx",
+              lineNumber: 76,
+              columnNumber: 15
+            }, this),
+            /* @__PURE__ */ jsxDEV(
+              "input",
+              {
+                type: "password",
+                className: "w-full px-4 py-3 rounded-lg bg-white/80 border border-indigo-500/10 text-sm outline-none focus:border-indigo-400 focus:ring-2 focus:ring-indigo-500/10 transition-all",
+                value: aiConfig.apiKey,
+                onChange: (e) => setAIConfig({ apiKey: e.target.value }),
+                placeholder: "sk-..."
+              },
+              void 0,
+              false,
+              {
+                fileName: "D:/翟静de工作文件/20260616完整产品demo尝试/ai-novel-creator/src/pages/AIConfig.tsx",
+                lineNumber: 80,
+                columnNumber: 15
+              },
+              this
+            ),
+            /* @__PURE__ */ jsxDEV("p", { className: "text-[10px] text-slate-400 mt-1", children: "在 DeepSeek 官网获取 API Key，注册即送 500 万 token 免费额度" }, void 0, false, {
+              fileName: "D:/翟静de工作文件/20260616完整产品demo尝试/ai-novel-creator/src/pages/AIConfig.tsx",
+              lineNumber: 87,
+              columnNumber: 15
+            }, this)
+          ] }, void 0, true, {
+            fileName: "D:/翟静de工作文件/20260616完整产品demo尝试/ai-novel-creator/src/pages/AIConfig.tsx",
+            lineNumber: 75,
+            columnNumber: 13
+          }, this),
+          /* @__PURE__ */ jsxDEV("div", { children: [
+            /* @__PURE__ */ jsxDEV("label", { className: "flex items-center gap-2 text-xs text-slate-500 mb-1.5", children: [
+              /* @__PURE__ */ jsxDEV(Cpu, { size: 12 }, void 0, false, {
+                fileName: "D:/翟静de工作文件/20260616完整产品demo尝试/ai-novel-creator/src/pages/AIConfig.tsx",
+                lineNumber: 94,
+                columnNumber: 17
+              }, this),
+              "模型名称"
+            ] }, void 0, true, {
+              fileName: "D:/翟静de工作文件/20260616完整产品demo尝试/ai-novel-creator/src/pages/AIConfig.tsx",
+              lineNumber: 93,
+              columnNumber: 15
+            }, this),
+            /* @__PURE__ */ jsxDEV(
+              "input",
+              {
+                className: "w-full px-4 py-3 rounded-lg bg-white/80 border border-indigo-500/10 text-sm outline-none focus:border-indigo-400 focus:ring-2 focus:ring-indigo-500/10 transition-all",
+                value: aiConfig.model,
+                onChange: (e) => setAIConfig({ model: e.target.value }),
+                placeholder: "deepseek-chat"
+              },
+              void 0,
+              false,
+              {
+                fileName: "D:/翟静de工作文件/20260616完整产品demo尝试/ai-novel-creator/src/pages/AIConfig.tsx",
+                lineNumber: 97,
+                columnNumber: 15
+              },
+              this
+            ),
+            /* @__PURE__ */ jsxDEV("p", { className: "text-[10px] text-slate-400 mt-1", children: "推荐：deepseek-chat（DeepSeek 模型）" }, void 0, false, {
+              fileName: "D:/翟静de工作文件/20260616完整产品demo尝试/ai-novel-creator/src/pages/AIConfig.tsx",
+              lineNumber: 103,
+              columnNumber: 15
+            }, this)
+          ] }, void 0, true, {
+            fileName: "D:/翟静de工作文件/20260616完整产品demo尝试/ai-novel-creator/src/pages/AIConfig.tsx",
+            lineNumber: 92,
+            columnNumber: 13
+          }, this),
+          /* @__PURE__ */ jsxDEV("div", { className: "flex items-center justify-between pt-4 border-t border-indigo-500/10", children: /* @__PURE__ */ jsxDEV("div", { className: "flex items-center gap-2", children: isAIConfigured ? /* @__PURE__ */ jsxDEV(Fragment, { children: [
+            /* @__PURE__ */ jsxDEV(CheckCircle, { size: 16, className: "text-emerald-500" }, void 0, false, {
+              fileName: "D:/翟静de工作文件/20260616完整产品demo尝试/ai-novel-creator/src/pages/AIConfig.tsx",
+              lineNumber: 112,
+              columnNumber: 21
+            }, this),
+            /* @__PURE__ */ jsxDEV("span", { className: "text-xs text-emerald-600 font-semibold", children: "AI 已配置" }, void 0, false, {
+              fileName: "D:/翟静de工作文件/20260616完整产品demo尝试/ai-novel-creator/src/pages/AIConfig.tsx",
+              lineNumber: 113,
+              columnNumber: 21
+            }, this)
+          ] }, void 0, true, {
+            fileName: "D:/翟静de工作文件/20260616完整产品demo尝试/ai-novel-creator/src/pages/AIConfig.tsx",
+            lineNumber: 111,
+            columnNumber: 17
+          }, this) : /* @__PURE__ */ jsxDEV(Fragment, { children: [
+            /* @__PURE__ */ jsxDEV(AlertCircle, { size: 16, className: "text-slate-400" }, void 0, false, {
+              fileName: "D:/翟静de工作文件/20260616完整产品demo尝试/ai-novel-creator/src/pages/AIConfig.tsx",
+              lineNumber: 117,
+              columnNumber: 21
+            }, this),
+            /* @__PURE__ */ jsxDEV("span", { className: "text-xs text-slate-600", children: "AI 未配置" }, void 0, false, {
+              fileName: "D:/翟静de工作文件/20260616完整产品demo尝试/ai-novel-creator/src/pages/AIConfig.tsx",
+              lineNumber: 118,
+              columnNumber: 21
+            }, this)
+          ] }, void 0, true, {
+            fileName: "D:/翟静de工作文件/20260616完整产品demo尝试/ai-novel-creator/src/pages/AIConfig.tsx",
+            lineNumber: 116,
+            columnNumber: 17
+          }, this) }, void 0, false, {
+            fileName: "D:/翟静de工作文件/20260616完整产品demo尝试/ai-novel-creator/src/pages/AIConfig.tsx",
+            lineNumber: 109,
+            columnNumber: 15
+          }, this) }, void 0, false, {
+            fileName: "D:/翟静de工作文件/20260616完整产品demo尝试/ai-novel-creator/src/pages/AIConfig.tsx",
+            lineNumber: 108,
+            columnNumber: 13
+          }, this)
+        ] }, void 0, true, {
+          fileName: "D:/翟静de工作文件/20260616完整产品demo尝试/ai-novel-creator/src/pages/AIConfig.tsx",
+          lineNumber: 58,
+          columnNumber: 11
+        }, this)
+      ] }, void 0, true, {
+        fileName: "D:/翟静de工作文件/20260616完整产品demo尝试/ai-novel-creator/src/pages/AIConfig.tsx",
+        lineNumber: 49,
+        columnNumber: 9
+      }, this),
+      /* @__PURE__ */ jsxDEV("section", { className: "glass rounded-2xl p-6 glow-border", children: [
+        /* @__PURE__ */ jsxDEV("div", { className: "flex items-center gap-2 mb-5", children: [
+          /* @__PURE__ */ jsxDEV("div", { className: "w-2 h-2 rounded-full bg-blue-500 shadow-[0_0_12px_#3B82F6]" }, void 0, false, {
+            fileName: "D:/翟静de工作文件/20260616完整产品demo尝试/ai-novel-creator/src/pages/AIConfig.tsx",
+            lineNumber: 128,
+            columnNumber: 13
+          }, this),
+          /* @__PURE__ */ jsxDEV("h2", { className: "text-base font-bold", children: "如何获取 DeepSeek API Key？" }, void 0, false, {
+            fileName: "D:/翟静de工作文件/20260616完整产品demo尝试/ai-novel-creator/src/pages/AIConfig.tsx",
+            lineNumber: 129,
+            columnNumber: 13
+          }, this)
+        ] }, void 0, true, {
+          fileName: "D:/翟静de工作文件/20260616完整产品demo尝试/ai-novel-creator/src/pages/AIConfig.tsx",
+          lineNumber: 127,
+          columnNumber: 11
+        }, this),
+        /* @__PURE__ */ jsxDEV("div", { className: "bg-blue-50 rounded-lg p-4 border border-blue-200", children: [
+          /* @__PURE__ */ jsxDEV("ol", { className: "text-xs text-blue-600 space-y-2 list-decimal list-inside", children: [
+            /* @__PURE__ */ jsxDEV("li", { children: [
+              "访问 ",
+              /* @__PURE__ */ jsxDEV("a", { href: "https://platform.deepseek.com", target: "_blank", rel: "noopener noreferrer", className: "text-blue-700 font-semibold hover:underline", children: "https://platform.deepseek.com" }, void 0, false, {
+                fileName: "D:/翟静de工作文件/20260616完整产品demo尝试/ai-novel-creator/src/pages/AIConfig.tsx",
+                lineNumber: 134,
+                columnNumber: 22
+              }, this)
+            ] }, void 0, true, {
+              fileName: "D:/翟静de工作文件/20260616完整产品demo尝试/ai-novel-creator/src/pages/AIConfig.tsx",
+              lineNumber: 134,
+              columnNumber: 15
+            }, this),
+            /* @__PURE__ */ jsxDEV("li", { children: "注册账号并登录" }, void 0, false, {
+              fileName: "D:/翟静de工作文件/20260616完整产品demo尝试/ai-novel-creator/src/pages/AIConfig.tsx",
+              lineNumber: 135,
+              columnNumber: 15
+            }, this),
+            /* @__PURE__ */ jsxDEV("li", { children: '进入"API Keys"页面' }, void 0, false, {
+              fileName: "D:/翟静de工作文件/20260616完整产品demo尝试/ai-novel-creator/src/pages/AIConfig.tsx",
+              lineNumber: 136,
+              columnNumber: 15
+            }, this),
+            /* @__PURE__ */ jsxDEV("li", { children: '点击"创建 API Key"' }, void 0, false, {
+              fileName: "D:/翟静de工作文件/20260616完整产品demo尝试/ai-novel-creator/src/pages/AIConfig.tsx",
+              lineNumber: 137,
+              columnNumber: 15
+            }, this),
+            /* @__PURE__ */ jsxDEV("li", { children: "复制生成的 Key 并粘贴到上方输入框" }, void 0, false, {
+              fileName: "D:/翟静de工作文件/20260616完整产品demo尝试/ai-novel-creator/src/pages/AIConfig.tsx",
+              lineNumber: 138,
+              columnNumber: 15
+            }, this)
+          ] }, void 0, true, {
+            fileName: "D:/翟静de工作文件/20260616完整产品demo尝试/ai-novel-creator/src/pages/AIConfig.tsx",
+            lineNumber: 133,
+            columnNumber: 13
+          }, this),
+          /* @__PURE__ */ jsxDEV("p", { className: "text-[11px] text-blue-500 mt-3", children: '查看额度：登录后在控制台"费用管理"页面查看余额和使用情况' }, void 0, false, {
+            fileName: "D:/翟静de工作文件/20260616完整产品demo尝试/ai-novel-creator/src/pages/AIConfig.tsx",
+            lineNumber: 140,
+            columnNumber: 13
+          }, this)
+        ] }, void 0, true, {
+          fileName: "D:/翟静de工作文件/20260616完整产品demo尝试/ai-novel-creator/src/pages/AIConfig.tsx",
+          lineNumber: 132,
+          columnNumber: 11
+        }, this)
+      ] }, void 0, true, {
+        fileName: "D:/翟静de工作文件/20260616完整产品demo尝试/ai-novel-creator/src/pages/AIConfig.tsx",
+        lineNumber: 126,
+        columnNumber: 9
+      }, this),
+      /* @__PURE__ */ jsxDEV("section", { className: "glass rounded-2xl p-6 glow-border", children: [
+        /* @__PURE__ */ jsxDEV("div", { className: "flex items-center gap-2 mb-5", children: [
+          /* @__PURE__ */ jsxDEV("div", { className: "w-2 h-2 rounded-full bg-violet-500 shadow-[0_0_12px_#8B5CF6]" }, void 0, false, {
+            fileName: "D:/翟静de工作文件/20260616完整产品demo尝试/ai-novel-creator/src/pages/AIConfig.tsx",
+            lineNumber: 148,
+            columnNumber: 13
+          }, this),
+          /* @__PURE__ */ jsxDEV("h2", { className: "text-base font-bold", children: "配置说明" }, void 0, false, {
+            fileName: "D:/翟静de工作文件/20260616完整产品demo尝试/ai-novel-creator/src/pages/AIConfig.tsx",
+            lineNumber: 149,
+            columnNumber: 13
+          }, this)
+        ] }, void 0, true, {
+          fileName: "D:/翟静de工作文件/20260616完整产品demo尝试/ai-novel-creator/src/pages/AIConfig.tsx",
+          lineNumber: 147,
+          columnNumber: 11
+        }, this),
+        /* @__PURE__ */ jsxDEV("div", { className: "space-y-3 text-xs text-slate-600", children: [
+          /* @__PURE__ */ jsxDEV("p", { children: [
+            /* @__PURE__ */ jsxDEV("span", { className: "font-semibold text-slate-700", children: "独立配置：" }, void 0, false, {
+              fileName: "D:/翟静de工作文件/20260616完整产品demo尝试/ai-novel-creator/src/pages/AIConfig.tsx",
+              lineNumber: 154,
+              columnNumber: 15
+            }, this),
+            "每个用户需要配置自己的 API Key，配置保存在浏览器本地存储中，不会共享给其他用户。"
+          ] }, void 0, true, {
+            fileName: "D:/翟静de工作文件/20260616完整产品demo尝试/ai-novel-creator/src/pages/AIConfig.tsx",
+            lineNumber: 153,
+            columnNumber: 13
+          }, this),
+          /* @__PURE__ */ jsxDEV("p", { children: [
+            /* @__PURE__ */ jsxDEV("span", { className: "font-semibold text-slate-700", children: "安全存储：" }, void 0, false, {
+              fileName: "D:/翟静de工作文件/20260616完整产品demo尝试/ai-novel-creator/src/pages/AIConfig.tsx",
+              lineNumber: 158,
+              columnNumber: 15
+            }, this),
+            "API Key 仅保存在你的浏览器中，不会上传到服务器，确保安全性。"
+          ] }, void 0, true, {
+            fileName: "D:/翟静de工作文件/20260616完整产品demo尝试/ai-novel-creator/src/pages/AIConfig.tsx",
+            lineNumber: 157,
+            columnNumber: 13
+          }, this),
+          /* @__PURE__ */ jsxDEV("p", { children: [
+            /* @__PURE__ */ jsxDEV("span", { className: "font-semibold text-slate-700", children: "免费额度：" }, void 0, false, {
+              fileName: "D:/翟静de工作文件/20260616完整产品demo尝试/ai-novel-creator/src/pages/AIConfig.tsx",
+              lineNumber: 162,
+              columnNumber: 15
+            }, this),
+            "DeepSeek 注册即送 500 万 token 免费额度，足够日常使用。"
+          ] }, void 0, true, {
+            fileName: "D:/翟静de工作文件/20260616完整产品demo尝试/ai-novel-creator/src/pages/AIConfig.tsx",
+            lineNumber: 161,
+            columnNumber: 13
+          }, this),
+          /* @__PURE__ */ jsxDEV("p", { children: [
+            /* @__PURE__ */ jsxDEV("span", { className: "font-semibold text-slate-700", children: "功能启用：" }, void 0, false, {
+              fileName: "D:/翟静de工作文件/20260616完整产品demo尝试/ai-novel-creator/src/pages/AIConfig.tsx",
+              lineNumber: 166,
+              columnNumber: 15
+            }, this),
+            "配置完成后，同人文搜索、AI 解析等功能将自动启用。"
+          ] }, void 0, true, {
+            fileName: "D:/翟静de工作文件/20260616完整产品demo尝试/ai-novel-creator/src/pages/AIConfig.tsx",
+            lineNumber: 165,
+            columnNumber: 13
+          }, this)
+        ] }, void 0, true, {
+          fileName: "D:/翟静de工作文件/20260616完整产品demo尝试/ai-novel-creator/src/pages/AIConfig.tsx",
+          lineNumber: 152,
+          columnNumber: 11
+        }, this)
+      ] }, void 0, true, {
+        fileName: "D:/翟静de工作文件/20260616完整产品demo尝试/ai-novel-creator/src/pages/AIConfig.tsx",
+        lineNumber: 146,
+        columnNumber: 9
+      }, this)
+    ] }, void 0, true, {
+      fileName: "D:/翟静de工作文件/20260616完整产品demo尝试/ai-novel-creator/src/pages/AIConfig.tsx",
+      lineNumber: 48,
+      columnNumber: 7
+    }, this)
+  ] }, void 0, true, {
+    fileName: "D:/翟静de工作文件/20260616完整产品demo尝试/ai-novel-creator/src/pages/AIConfig.tsx",
+    lineNumber: 37,
+    columnNumber: 5
+  }, this);
+}
+_s(AIConfig, "qVSUv8FMtiIlyCKxoHW3FIHqp2o=", false, function() {
+  return [useAIConfigStore, useAIConfigStore, useAIConfigStore];
+});
+_c = AIConfig;
+var _c;
+$RefreshReg$(_c, "AIConfig");
+if (import.meta.hot && !inWebWorker) {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+if (import.meta.hot && !inWebWorker) {
+  RefreshRuntime.__hmr_import(import.meta.url).then((currentExports) => {
+    RefreshRuntime.registerExportsForReactRefresh("D:/翟静de工作文件/20260616完整产品demo尝试/ai-novel-creator/src/pages/AIConfig.tsx", currentExports);
+    import.meta.hot.accept((nextExports) => {
+      if (!nextExports) return;
+      const invalidateMessage = RefreshRuntime.validateRefreshBoundaryAndEnqueueUpdate("D:/翟静de工作文件/20260616完整产品demo尝试/ai-novel-creator/src/pages/AIConfig.tsx", currentExports, nextExports);
+      if (invalidateMessage) import.meta.hot.invalidate(invalidateMessage);
+    });
+  });
+}
+
+//# sourceMappingURL=data:application/json;base64,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QTtBQUFBLFVBQ0EsdUJBQUMsT0FDQztBQUFBLG1DQUFDLFVBQUssV0FBVSxnQ0FBK0IscUJBQS9DO0FBQUE7QUFBQTtBQUFBO0FBQUEsbUJBQW9EO0FBQUEsWUFBTTtBQUFBLGVBRDVEO0FBQUE7QUFBQTtBQUFBO0FBQUEsaUJBR0E7QUFBQSxhQWhCRjtBQUFBO0FBQUE7QUFBQTtBQUFBLGVBaUJBO0FBQUEsV0F2QkY7QUFBQTtBQUFBO0FBQUE7QUFBQSxhQXdCQTtBQUFBLFNBMUhGO0FBQUE7QUFBQTtBQUFBO0FBQUEsV0EySEE7QUFBQSxPQXRJRjtBQUFBO0FBQUE7QUFBQTtBQUFBLFNBdUlBO0FBRUo7QUFBQ04sR0F0SnVCRCxVQUFRO0FBQUEsVUFDYk4sa0JBQ0dBLGtCQUNHQSxnQkFBZ0I7QUFBQTtBQUFBLEtBSGpCTTtBQUFRLElBQUFtQjtBQUFBLGFBQUFBLElBQUEiLCJuYW1lcyI6WyJ1c2VTdGF0ZSIsInVzZUFJQ29uZmlnU3RvcmUiLCJLZXkiLCJHbG9iZSIsIkNwdSIsIkNoZWNrQ2lyY2xlIiwiQWxlcnRDaXJjbGUiLCJBSUNvbmZpZyIsIl9zIiwiYWlDb25maWciLCJzdGF0ZSIsImdldENvbmZpZyIsInNldEFJQ29uZmlnIiwic2V0Q29uZmlnIiwiaXNBSUNvbmZpZ3VyZWQiLCJpc0NvbmZpZ3VyZWQiLCJzYXZlZCIsInNldFNhdmVkIiwiaGFuZGxlU2F2ZSIsInNldFRpbWVvdXQiLCJhcGlVcmwiLCJlIiwidGFyZ2V0IiwidmFsdWUiLCJhcGlLZXkiLCJtb2RlbCIsIl9jIl0sImlnbm9yZUxpc3QiOltdLCJzb3VyY2VzIjpbIkFJQ29uZmlnLnRzeCJdLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgeyB1c2VTdGF0ZSB9IGZyb20gJ3JlYWN0J1xuaW1wb3J0IHsgdXNlQUlDb25maWdTdG9yZSB9IGZyb20gJ0Avc3RvcmUvdXNlQUlDb25maWdTdG9yZSdcbmltcG9ydCB7IEtleSwgR2xvYmUsIENwdSwgQ2hlY2tDaXJjbGUsIEFsZXJ0Q2lyY2xlIH0gZnJvbSAnbHVjaWRlLXJlYWN0J1xuXG5leHBvcnQgZGVmYXVsdCBmdW5jdGlvbiBBSUNvbmZpZygpIHtcbiAgY29uc3QgYWlDb25maWcgPSB1c2VBSUNvbmZpZ1N0b3JlKChzdGF0ZSkgPT4gc3RhdGUuZ2V0Q29uZmlnKCkpXG4gIGNvbnN0IHNldEFJQ29uZmlnID0gdXNlQUlDb25maWdTdG9yZSgoc3RhdGUpID0+IHN0YXRlLnNldENvbmZpZylcbiAgY29uc3QgaXNBSUNvbmZpZ3VyZWQgPSB1c2VBSUNvbmZpZ1N0b3JlKChzdGF0ZSkgPT4gc3RhdGUuaXNDb25maWd1cmVkKCkpXG5cbiAgY29uc3QgW3NhdmVkLCBzZXRTYXZlZF0gPSB1c2VTdGF0ZShmYWxzZSlcblxuICBjb25zdCBoYW5kbGVTYXZlID0gKCkgPT4ge1xuICAgIHNldFNhdmVkKHRydWUpXG4gICAgc2V0VGltZW91dCgoKSA9PiBzZXRTYXZlZChmYWxzZSksIDE1MDApXG4gIH1cblxuICByZXR1cm4gKFxuICAgIDxkaXYgY2xhc3NOYW1lPVwiZmxleC0xIGZsZXggZmxleC1jb2wgaC1mdWxsIG92ZXJmbG93LXktYXV0byBwLThcIj5cbiAgICAgIDxoZWFkZXIgY2xhc3NOYW1lPVwiZmxleCBpdGVtcy1jZW50ZXIganVzdGlmeS1iZXR3ZWVuIG1iLTZcIj5cbiAgICAgICAgPGgxIGNsYXNzTmFtZT1cInRleHQtMnhsIGZvbnQtZXh0cmFib2xkXCI+QUkg6YWN572uPC9oMT5cbiAgICAgICAgPGJ1dHRvblxuICAgICAgICAgIG9uQ2xpY2s9e2hhbmRsZVNhdmV9XG4gICAgICAgICAgY2xhc3NOYW1lPVwicHgtNSBweS0yLjUgcm91bmRlZC1sZyBiZy1ncmFkaWVudC10by1yIGZyb20tZW1lcmFsZC01MDAgdG8tY3lhbi01MDAgdGV4dC13aGl0ZSB0ZXh0LXNtIGZvbnQtc2VtaWJvbGQgc2hhZG93LWxnIHNoYWRvdy1lbWVyYWxkLTUwMC8yNSBob3ZlcjpzaGFkb3ctZW1lcmFsZC01MDAvNDAgaG92ZXI6LXRyYW5zbGF0ZS15LTAuNSB0cmFuc2l0aW9uLWFsbFwiXG4gICAgICAgID5cbiAgICAgICAgICB7c2F2ZWQgPyAn5bey5L+d5a2YJyA6ICfkv53lrZjphY3nva4nfVxuICAgICAgICA8L2J1dHRvbj5cbiAgICAgIDwvaGVhZGVyPlxuXG4gICAgICA8ZGl2IGNsYXNzTmFtZT1cIm1heC13LTR4bCBzcGFjZS15LTZcIj5cbiAgICAgICAgPHNlY3Rpb24gY2xhc3NOYW1lPVwiZ2xhc3Mgcm91bmRlZC0yeGwgcC02IGdsb3ctYm9yZGVyXCI+XG4gICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJmbGV4IGl0ZW1zLWNlbnRlciBnYXAtMiBtYi01XCI+XG4gICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cInctMiBoLTIgcm91bmRlZC1mdWxsIGJnLWVtZXJhbGQtNTAwIHNoYWRvdy1bMF8wXzEycHhfIzEwQjk4MV1cIiAvPlxuICAgICAgICAgICAgPGgyIGNsYXNzTmFtZT1cInRleHQtYmFzZSBmb250LWJvbGRcIj5BSSDmnI3liqHphY3nva48L2gyPlxuICAgICAgICAgIDwvZGl2PlxuICAgICAgICAgIDxwIGNsYXNzTmFtZT1cInRleHQteHMgdGV4dC1zbGF0ZS01MDAgbWItNFwiPlxuICAgICAgICAgICAg6YWN572uIEFJIOacjeWKoeS7peWQr+eUqOaZuuiDveaQnOe0ouWSjOino+aekOWKn+iDveOAguavj+S4queUqOaIt+mcgOimgemFjee9ruiHquW3seeahCBBUEkgS2V577yM6YWN572u5LuF5L+d5a2Y5Zyo5pys5Zyw5rWP6KeI5Zmo5Lit44CCXG4gICAgICAgICAgPC9wPlxuICAgICAgICAgIFxuICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwic3BhY2UteS00XCI+XG4gICAgICAgICAgICA8ZGl2PlxuICAgICAgICAgICAgICA8bGFiZWwgY2xhc3NOYW1lPVwiZmxleCBpdGVtcy1jZW50ZXIgZ2FwLTIgdGV4dC14cyB0ZXh0LXNsYXRlLTUwMCBtYi0xLjVcIj5cbiAgICAgICAgICAgICAgICA8R2xvYmUgc2l6ZT17MTJ9IC8+XG4gICAgICAgICAgICAgICAgQVBJIOWcsOWdgFxuICAgICAgICAgICAgICA8L2xhYmVsPlxuICAgICAgICAgICAgICA8aW5wdXRcbiAgICAgICAgICAgICAgICBjbGFzc05hbWU9XCJ3LWZ1bGwgcHgtNCBweS0zIHJvdW5kZWQtbGcgYmctd2hpdGUvODAgYm9yZGVyIGJvcmRlci1pbmRpZ28tNTAwLzEwIHRleHQtc20gb3V0bGluZS1ub25lIGZvY3VzOmJvcmRlci1pbmRpZ28tNDAwIGZvY3VzOnJpbmctMiBmb2N1czpyaW5nLWluZGlnby01MDAvMTAgdHJhbnNpdGlvbi1hbGxcIlxuICAgICAgICAgICAgICAgIHZhbHVlPXthaUNvbmZpZy5hcGlVcmx9XG4gICAgICAgICAgICAgICAgb25DaGFuZ2U9eyhlKSA9PiBzZXRBSUNvbmZpZyh7IGFwaVVybDogZS50YXJnZXQudmFsdWUgfSl9XG4gICAgICAgICAgICAgICAgcGxhY2Vob2xkZXI9XCJodHRwczovL2FwaS5kZWVwc2Vlay5jb20vdjEvY2hhdC9jb21wbGV0aW9uc1wiXG4gICAgICAgICAgICAgIC8+XG4gICAgICAgICAgICAgIDxwIGNsYXNzTmFtZT1cInRleHQtWzEwcHhdIHRleHQtc2xhdGUtNDAwIG10LTFcIj5cbiAgICAgICAgICAgICAgICBEZWVwU2VlazogaHR0cHM6Ly9hcGkuZGVlcHNlZWsuY29tL3YxL2NoYXQvY29tcGxldGlvbnNcbiAgICAgICAgICAgICAgPC9wPlxuICAgICAgICAgICAgPC9kaXY+XG5cbiAgICAgICAgICAgIDxkaXY+XG4gICAgICAgICAgICAgIDxsYWJlbCBjbGFzc05hbWU9XCJmbGV4IGl0ZW1zLWNlbnRlciBnYXAtMiB0ZXh0LXhzIHRleHQtc2xhdGUtNTAwIG1iLTEuNVwiPlxuICAgICAgICAgICAgICAgIDxLZXkgc2l6ZT17MTJ9IC8+XG4gICAgICAgICAgICAgICAgQVBJIEtleVxuICAgICAgICAgICAgICA8L2xhYmVsPlxuICAgICAgICAgICAgICA8aW5wdXRcbiAgICAgICAgICAgICAgICB0eXBlPVwicGFzc3dvcmRcIlxuICAgICAgICAgICAgICAgIGNsYXNzTmFtZT1cInctZnVsbCBweC00IHB5LTMgcm91bmRlZC1sZyBiZy13aGl0ZS84MCBib3JkZXIgYm9yZGVyLWluZGlnby01MDAvMTAgdGV4dC1zbSBvdXRsaW5lLW5vbmUgZm9jdXM6Ym9yZGVyLWluZGlnby00MDAgZm9jdXM6cmluZy0yIGZvY3VzOnJpbmctaW5kaWdvLTUwMC8xMCB0cmFuc2l0aW9uLWFsbFwiXG4gICAgICAgICAgICAgICAgdmFsdWU9e2FpQ29uZmlnLmFwaUtleX1cbiAgICAgICAgICAgICAgICBvbkNoYW5nZT17KGUpID0+IHNldEFJQ29uZmlnKHsgYXBpS2V5OiBlLnRhcmdldC52YWx1ZSB9KX1cbiAgICAgICAgICAgICAgICBwbGFjZWhvbGRlcj1cInNrLS4uLlwiXG4gICAgICAgICAgICAgIC8+XG4gICAgICAgICAgICAgIDxwIGNsYXNzTmFtZT1cInRleHQtWzEwcHhdIHRleHQtc2xhdGUtNDAwIG10LTFcIj5cbiAgICAgICAgICAgICAgICDlnKggRGVlcFNlZWsg5a6Y572R6I635Y+WIEFQSSBLZXnvvIzms6jlhozljbPpgIEgNTAwIOS4hyB0b2tlbiDlhY3otLnpop3luqZcbiAgICAgICAgICAgICAgPC9wPlxuICAgICAgICAgICAgPC9kaXY+XG5cbiAgICAgICAgICAgIDxkaXY+XG4gICAgICAgICAgICAgIDxsYWJlbCBjbGFzc05hbWU9XCJmbGV4IGl0ZW1zLWNlbnRlciBnYXAtMiB0ZXh0LXhzIHRleHQtc2xhdGUtNTAwIG1iLTEuNVwiPlxuICAgICAgICAgICAgICAgIDxDcHUgc2l6ZT17MTJ9IC8+XG4gICAgICAgICAgICAgICAg5qih5Z6L5ZCN56ewXG4gICAgICAgICAgICAgIDwvbGFiZWw+XG4gICAgICAgICAgICAgIDxpbnB1dFxuICAgICAgICAgICAgICAgIGNsYXNzTmFtZT1cInctZnVsbCBweC00IHB5LTMgcm91bmRlZC1sZyBiZy13aGl0ZS84MCBib3JkZXIgYm9yZGVyLWluZGlnby01MDAvMTAgdGV4dC1zbSBvdXRsaW5lLW5vbmUgZm9jdXM6Ym9yZGVyLWluZGlnby00MDAgZm9jdXM6cmluZy0yIGZvY3VzOnJpbmctaW5kaWdvLTUwMC8xMCB0cmFuc2l0aW9uLWFsbFwiXG4gICAgICAgICAgICAgICAgdmFsdWU9e2FpQ29uZmlnLm1vZGVsfVxuICAgICAgICAgICAgICAgIG9uQ2hhbmdlPXsoZSkgPT4gc2V0QUlDb25maWcoeyBtb2RlbDogZS50YXJnZXQudmFsdWUgfSl9XG4gICAgICAgICAgICAgICAgcGxhY2Vob2xkZXI9XCJkZWVwc2Vlay1jaGF0XCJcbiAgICAgICAgICAgICAgLz5cbiAgICAgICAgICAgICAgPHAgY2xhc3NOYW1lPVwidGV4dC1bMTBweF0gdGV4dC1zbGF0ZS00MDAgbXQtMVwiPlxuICAgICAgICAgICAgICAgIOaOqOiNkO+8mmRlZXBzZWVrLWNoYXTvvIhEZWVwU2VlayDmqKHlnovvvIlcbiAgICAgICAgICAgICAgPC9wPlxuICAgICAgICAgICAgPC9kaXY+XG5cbiAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwiZmxleCBpdGVtcy1jZW50ZXIganVzdGlmeS1iZXR3ZWVuIHB0LTQgYm9yZGVyLXQgYm9yZGVyLWluZGlnby01MDAvMTBcIj5cbiAgICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJmbGV4IGl0ZW1zLWNlbnRlciBnYXAtMlwiPlxuICAgICAgICAgICAgICAgIHtpc0FJQ29uZmlndXJlZCA/IChcbiAgICAgICAgICAgICAgICAgIDw+XG4gICAgICAgICAgICAgICAgICAgIDxDaGVja0NpcmNsZSBzaXplPXsxNn0gY2xhc3NOYW1lPVwidGV4dC1lbWVyYWxkLTUwMFwiIC8+XG4gICAgICAgICAgICAgICAgICAgIDxzcGFuIGNsYXNzTmFtZT1cInRleHQteHMgdGV4dC1lbWVyYWxkLTYwMCBmb250LXNlbWlib2xkXCI+QUkg5bey6YWN572uPC9zcGFuPlxuICAgICAgICAgICAgICAgICAgPC8+XG4gICAgICAgICAgICAgICAgKSA6IChcbiAgICAgICAgICAgICAgICAgIDw+XG4gICAgICAgICAgICAgICAgICAgIDxBbGVydENpcmNsZSBzaXplPXsxNn0gY2xhc3NOYW1lPVwidGV4dC1zbGF0ZS00MDBcIiAvPlxuICAgICAgICAgICAgICAgICAgICA8c3BhbiBjbGFzc05hbWU9XCJ0ZXh0LXhzIHRleHQtc2xhdGUtNjAwXCI+QUkg5pyq6YWN572uPC9zcGFuPlxuICAgICAgICAgICAgICAgICAgPC8+XG4gICAgICAgICAgICAgICAgKX1cbiAgICAgICAgICAgICAgPC9kaXY+XG4gICAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgPC9zZWN0aW9uPlxuXG4gICAgICAgIDxzZWN0aW9uIGNsYXNzTmFtZT1cImdsYXNzIHJvdW5kZWQtMnhsIHAtNiBnbG93LWJvcmRlclwiPlxuICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwiZmxleCBpdGVtcy1jZW50ZXIgZ2FwLTIgbWItNVwiPlxuICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJ3LTIgaC0yIHJvdW5kZWQtZnVsbCBiZy1ibHVlLTUwMCBzaGFkb3ctWzBfMF8xMnB4XyMzQjgyRjZdXCIgLz5cbiAgICAgICAgICAgIDxoMiBjbGFzc05hbWU9XCJ0ZXh0LWJhc2UgZm9udC1ib2xkXCI+5aaC5L2V6I635Y+WIERlZXBTZWVrIEFQSSBLZXnvvJ88L2gyPlxuICAgICAgICAgIDwvZGl2PlxuICAgICAgICAgIFxuICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwiYmctYmx1ZS01MCByb3VuZGVkLWxnIHAtNCBib3JkZXIgYm9yZGVyLWJsdWUtMjAwXCI+XG4gICAgICAgICAgICA8b2wgY2xhc3NOYW1lPVwidGV4dC14cyB0ZXh0LWJsdWUtNjAwIHNwYWNlLXktMiBsaXN0LWRlY2ltYWwgbGlzdC1pbnNpZGVcIj5cbiAgICAgICAgICAgICAgPGxpPuiuv+mXriA8YSBocmVmPVwiaHR0cHM6Ly9wbGF0Zm9ybS5kZWVwc2Vlay5jb21cIiB0YXJnZXQ9XCJfYmxhbmtcIiByZWw9XCJub29wZW5lciBub3JlZmVycmVyXCIgY2xhc3NOYW1lPVwidGV4dC1ibHVlLTcwMCBmb250LXNlbWlib2xkIGhvdmVyOnVuZGVybGluZVwiPmh0dHBzOi8vcGxhdGZvcm0uZGVlcHNlZWsuY29tPC9hPjwvbGk+XG4gICAgICAgICAgICAgIDxsaT7ms6jlhozotKblj7flubbnmbvlvZU8L2xpPlxuICAgICAgICAgICAgICA8bGk+6L+b5YWlXCJBUEkgS2V5c1wi6aG16Z2iPC9saT5cbiAgICAgICAgICAgICAgPGxpPueCueWHu1wi5Yib5bu6IEFQSSBLZXlcIjwvbGk+XG4gICAgICAgICAgICAgIDxsaT7lpI3liLbnlJ/miJDnmoQgS2V5IOW5tueymOi0tOWIsOS4iuaWuei+k+WFpeahhjwvbGk+XG4gICAgICAgICAgICA8L29sPlxuICAgICAgICAgICAgPHAgY2xhc3NOYW1lPVwidGV4dC1bMTFweF0gdGV4dC1ibHVlLTUwMCBtdC0zXCI+XG4gICAgICAgICAgICAgIOafpeeci+mineW6pu+8mueZu+W9leWQjuWcqOaOp+WItuWPsFwi6LS555So566h55CGXCLpobXpnaLmn6XnnIvkvZnpop3lkozkvb/nlKjmg4XlhrVcbiAgICAgICAgICAgIDwvcD5cbiAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgPC9zZWN0aW9uPlxuXG4gICAgICAgIDxzZWN0aW9uIGNsYXNzTmFtZT1cImdsYXNzIHJvdW5kZWQtMnhsIHAtNiBnbG93LWJvcmRlclwiPlxuICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwiZmxleCBpdGVtcy1jZW50ZXIgZ2FwLTIgbWItNVwiPlxuICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJ3LTIgaC0yIHJvdW5kZWQtZnVsbCBiZy12aW9sZXQtNTAwIHNoYWRvdy1bMF8wXzEycHhfIzhCNUNGNl1cIiAvPlxuICAgICAgICAgICAgPGgyIGNsYXNzTmFtZT1cInRleHQtYmFzZSBmb250LWJvbGRcIj7phY3nva7or7TmmI48L2gyPlxuICAgICAgICAgIDwvZGl2PlxuICAgICAgICAgIFxuICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwic3BhY2UteS0zIHRleHQteHMgdGV4dC1zbGF0ZS02MDBcIj5cbiAgICAgICAgICAgIDxwPlxuICAgICAgICAgICAgICA8c3BhbiBjbGFzc05hbWU9XCJmb250LXNlbWlib2xkIHRleHQtc2xhdGUtNzAwXCI+54us56uL6YWN572u77yaPC9zcGFuPlxuICAgICAgICAgICAgICDmr4/kuKrnlKjmiLfpnIDopoHphY3nva7oh6rlt7HnmoQgQVBJIEtlee+8jOmFjee9ruS/neWtmOWcqOa1j+iniOWZqOacrOWcsOWtmOWCqOS4re+8jOS4jeS8muWFseS6q+e7meWFtuS7lueUqOaIt+OAglxuICAgICAgICAgICAgPC9wPlxuICAgICAgICAgICAgPHA+XG4gICAgICAgICAgICAgIDxzcGFuIGNsYXNzTmFtZT1cImZvbnQtc2VtaWJvbGQgdGV4dC1zbGF0ZS03MDBcIj7lronlhajlrZjlgqjvvJo8L3NwYW4+XG4gICAgICAgICAgICAgIEFQSSBLZXkg5LuF5L+d5a2Y5Zyo5L2g55qE5rWP6KeI5Zmo5Lit77yM5LiN5Lya5LiK5Lyg5Yiw5pyN5Yqh5Zmo77yM56Gu5L+d5a6J5YWo5oCn44CCXG4gICAgICAgICAgICA8L3A+XG4gICAgICAgICAgICA8cD5cbiAgICAgICAgICAgICAgPHNwYW4gY2xhc3NOYW1lPVwiZm9udC1zZW1pYm9sZCB0ZXh0LXNsYXRlLTcwMFwiPuWFjei0uemineW6pu+8mjwvc3Bhbj5cbiAgICAgICAgICAgICAgRGVlcFNlZWsg5rOo5YaM5Y2z6YCBIDUwMCDkuIcgdG9rZW4g5YWN6LS56aKd5bqm77yM6Laz5aSf5pel5bi45L2/55So44CCXG4gICAgICAgICAgICA8L3A+XG4gICAgICAgICAgICA8cD5cbiAgICAgICAgICAgICAgPHNwYW4gY2xhc3NOYW1lPVwiZm9udC1zZW1pYm9sZCB0ZXh0LXNsYXRlLTcwMFwiPuWKn+iDveWQr+eUqO+8mjwvc3Bhbj5cbiAgICAgICAgICAgICAg6YWN572u5a6M5oiQ5ZCO77yM5ZCM5Lq65paH5pCc57Si44CBQUkg6Kej5p6Q562J5Yqf6IO95bCG6Ieq5Yqo5ZCv55So44CCXG4gICAgICAgICAgICA8L3A+XG4gICAgICAgICAgPC9kaXY+XG4gICAgICAgIDwvc2VjdGlvbj5cbiAgICAgIDwvZGl2PlxuICAgIDwvZGl2PlxuICApXG59XG4iXSwiZmlsZSI6IkQ6L+e/n+mdmWRl5bel5L2c5paH5Lu2LzIwMjYwNjE25a6M5pW05Lqn5ZOBZGVtb+WwneivlS9haS1ub3ZlbC1jcmVhdG9yL3NyYy9wYWdlcy9BSUNvbmZpZy50c3gifQ==
